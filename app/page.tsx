@@ -1,9 +1,9 @@
-import { SplineSceneBasic } from "@/components/ui/demo";
+import { HeroSection } from "@/components/ui/hero-section";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8">
-      <SplineSceneBasic />
+    <main className="min-h-screen bg-black">
+      <HeroSection />
     </main>
   );
 }
