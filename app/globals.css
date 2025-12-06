@@ -95,3 +95,18 @@
     transform: rotate(360deg);
   }
 }
+
+/* Hero text rise on load */
+.hero-rise {
+  animation: hero-rise 1.4s ease forwards 0.15s;
+}
+
+@keyframes hero-rise {
+  0%,
+  55% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-24vh);
+  }
+}
