@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useRef, useState, useCallback, useEffect } from 'react';
-import { motion, useSpring, useTransform, SpringOptions } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import React, { useRef, useState, useCallback, useEffect } from "react";
+import { motion, useSpring, useTransform, SpringOptions } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 type SpotlightProps = {
   className?: string;
@@ -29,8 +29,8 @@ export function SpotlightIbelick({
     if (containerRef.current) {
       const parent = containerRef.current.parentElement;
       if (parent) {
-        parent.style.position = 'relative';
-        parent.style.overflow = 'hidden';
+        parent.style.position = "relative";
+        parent.style.overflow = "hidden";
         setParentElement(parent);
       }
     }
@@ -49,14 +49,14 @@ export function SpotlightIbelick({
   useEffect(() => {
     if (!parentElement) return;
 
-    parentElement.addEventListener('mousemove', handleMouseMove);
-    parentElement.addEventListener('mouseenter', () => setIsHovered(true));
-    parentElement.addEventListener('mouseleave', () => setIsHovered(false));
+    parentElement.addEventListener("mousemove", handleMouseMove);
+    parentElement.addEventListener("mouseenter", () => setIsHovered(true));
+    parentElement.addEventListener("mouseleave", () => setIsHovered(false));
 
     return () => {
-      parentElement.removeEventListener('mousemove', handleMouseMove);
-      parentElement.removeEventListener('mouseenter', () => setIsHovered(true));
-      parentElement.removeEventListener('mouseleave', () =>
+      parentElement.removeEventListener("mousemove", handleMouseMove);
+      parentElement.removeEventListener("mouseenter", () => setIsHovered(true));
+      parentElement.removeEventListener("mouseleave", () =>
         setIsHovered(false)
       );
     };
@@ -66,9 +66,9 @@ export function SpotlightIbelick({
     <motion.div
       ref={containerRef}
       className={cn(
-        'pointer-events-none absolute z-[2] rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops),transparent_80%)] blur-xl transition-opacity duration-200',
-        'from-white via-white/80 to-white/40',
-        isHovered ? 'opacity-100' : 'opacity-0',
+        "pointer-events-none absolute z-[2] rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops),transparent_80%)] blur-xl transition-opacity duration-200",
+        "from-white via-white/80 to-white/40",
+        isHovered ? "opacity-100" : "opacity-0",
         className
       )}
       style={{
@@ -80,4 +80,3 @@ export function SpotlightIbelick({
     />
   );
 }
-
