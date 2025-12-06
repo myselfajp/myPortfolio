@@ -3,6 +3,7 @@
 import { SplineScene } from "@/components/ui/splite";
 import { Card } from "@/components/ui/card"
 import { Spotlight } from "@/components/ui/spotlight"
+import { SpotlightIbelick } from "@/components/ui/spotlight-ibelick"
  
 export function SplineSceneBasic() {
   return (
@@ -11,6 +12,7 @@ export function SplineSceneBasic() {
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
+      <SpotlightIbelick className="opacity-40" size={300} />
       
       <div className="flex h-full">
         {/* Left content */}
